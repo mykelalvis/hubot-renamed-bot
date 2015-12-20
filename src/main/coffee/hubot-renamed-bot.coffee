@@ -11,7 +11,6 @@
 module.exports = (robot) ->
 	robot.hear /^ihtbot:? (.+)/i, (res) ->
 		gripe(robot,res)
-		return	
 
 gripe = (robot,response) -> 
 	rstr = "Sorry, I'm a diva and only respond to #{robot.name}"
