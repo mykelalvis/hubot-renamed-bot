@@ -1,5 +1,5 @@
 # Description:
-#   Straiht from the examples
+#   Straight from the examples
 #
 # Notes:
 #   They are commented out by default, because most of them are pretty silly and
