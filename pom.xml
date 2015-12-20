@@ -103,7 +103,7 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>install node and npm</id>
+						<id>install-node-and-npm</id>
 						<goals>
 							<goal>install-node-and-npm</goal>
 						</goals>
@@ -124,7 +124,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>npm run build</id>
+						<id>npm-run-build</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
@@ -134,7 +134,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>npmpackage</id>
+						<id>npm-package</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
