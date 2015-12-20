@@ -30,3 +30,4 @@ node_modules
 .settings
 .cache*
 target
+.DS_Store
