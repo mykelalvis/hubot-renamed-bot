@@ -25,12 +25,21 @@
 		<version>0.2.21-SNAPSHOT</version>
 	</parent>
 	<artifactId>hubot-renamed-bot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
+	<name>hubot-renamed-bot</name>
+	<description>a bot that performs the respond-to-rename from the example scripts</description>
 	<properties>
 		<node.filter.dir>${project.build.directory}/node-package</node.filter.dir>
 		<node.filter.javascript.source>false</node.filter.javascript.source>
 	</properties>
+	<url>http://${team.group.id}.github.io/${project.artifactId}/${site.path}/</url>
+	<scm>
+		<connection>scm:git:${git.http.url}</connection>
+		<url>${git.http.url}/tree/${GITHUB.BRANCH}</url>
+		<developerConnection>scm:git:${git.url}</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 	<build>
 		<plugins>
 			<plugin>
@@ -49,7 +58,7 @@
 									<filtering>${node.filter.javascript.source}</filtering>
 								</resource>
 							</resources>
-							<outputDirectory>${node.filter.dir}</outputDirectory>
+							<outputDirectory>${node.filter.dir}/src</outputDirectory>
 						</configuration>
 					</execution>
 					<execution>
@@ -65,7 +74,7 @@
 									<filtering>${node.filter.javascript.source}</filtering>
 								</resource>
 							</resources>
-							<outputDirectory>${node.filter.dir}</outputDirectory>
+							<outputDirectory>${node.filter.dir}/src</outputDirectory>
 						</configuration>
 					</execution>
 					<execution>
@@ -99,6 +108,7 @@
 							<goal>install-node-and-npm</goal>
 						</goals>
 						<configuration>
+							<downloadRoot>file://${basedir}/</downloadRoot>
 							<nodeVersion>${node.version}</nodeVersion>
 							<npmVersion>${npm.version}</npmVersion>
 						</configuration>

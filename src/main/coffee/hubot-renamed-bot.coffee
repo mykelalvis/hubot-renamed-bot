@@ -8,13 +8,12 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
-gripe (res) -> 
-	response = "Sorry, I'm a diva and only respond to #{robot.name}"
-	response += " or #{robot.alias}" if robot.alias
-	res.reply response
-	return
-
 module.exports = (robot) ->
-
 	robot.hear /^ihtbot:? (.+)/i, (res) ->
-		gripe res
+		gripe(robot,res)
+		return	
+
+gripe = (robot,response) -> 
+	rstr = "Sorry, I'm a diva and only respond to #{robot.name}"
+	rst += " or #{robot.alias}" if robot.alias
+	response.reply rstr
