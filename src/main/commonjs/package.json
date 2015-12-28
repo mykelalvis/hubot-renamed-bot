@@ -1,7 +1,7 @@
 {
 	"name":"${project.artifactId}",
 	"version":"${project.version}",
-	"author":"Mykel Alvis @mykelalvis",
+	"author":"@mykelalvis <mykel.alvis@gmail.com>",
 	"license":"Apache 2.0",
 	"description":"${project.description}",
 	"repository":{
